@@ -1,0 +1,686 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Boot strap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Suraj Kumar (Data Science) Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 35);
+            color: white;
+            font-family: 'Poppins', sans-serif, serif, 'Times New Roman', Times;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(17, 37, 102);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        footer {
+            background-color: rgb(8, 22, 68);
+            height: 500px;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(55, 55, 204);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .navbar-brand {
+            font-size: 1.7em;
+        }
+
+        .left {
+            font-size: 1.7rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: rgb(113, 113, 207);
+            font-size: 1.04rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 200px 0;
+            padding: auto;
+        }
+
+        .firstSection .leftSection {
+            font-size: 2.5rem;
+            margin: 200px 0 2;
+        }
+        .secondSection .leftSection {
+            font-size: 2.5rem;
+            margin: 200px 0 2;
+        }
+        .thirdSection  {
+            font-size: 2.5rem;
+            margin: 200px auto;
+        }
+        .fourthSection{
+            font-size: 2.5rem;
+            margin: 200px auto;
+        }
+        .fifthSection{
+            font-size: 2.5rem;
+            margin: 200px auto;
+        }
+        .firstSection div {
+            width: 30%;
+        }
+
+        .secondSection {
+            display: flex;
+            justify-content: space-around;
+            max-width: 80vw;
+            margin: auto;
+        }
+        .thirdSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 140px 0;
+        }
+        .fourthSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 140px 0;
+        }
+        .fifthSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 140px 0;
+        }
+
+        .secondSection .leftSection h1 {
+            font-size: 2.5rem;
+        }
+
+        .footer {
+            display: flex;
+            margin: 23px 122px;
+            height: 500px;
+            justify-content: space-between;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer-second {
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .footer-second table {
+            margin: 0 auto;
+            border-spacing: 20px 10px;
+        }
+
+        .footer-second th,
+        .footer-second td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        .footer-second a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .footer-second a:hover {
+            color: #ff5733;
+        }
+
+        .footer-second a i {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .rightSection {
+            padding: 3em 2em;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .fourthSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: wheat;
+        }
+
+        .footer-fourth>div {
+            display: inline;
+        }
+
+        .purple {
+            color: rgb(112, 154, 245);
+        }
+
+        .text-grey {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(112, 154, 245);
+        }
+
+        @media (max-width: 768px) {
+
+            .firstSection,
+            .secondSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .firstSection div,
+            .secondSection div {
+                width: 80%;
+            }
+
+            .firstSection {
+                margin: 70px 0;
+            }
+        }
+
+        .btn {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            /* Ensures the download link looks like a button */
+            display: inline-block;
+            /* Makes the download link behave like a button */
+        }
+
+        .cont-btn {
+            width: 30%;
+            padding: 4px 4px;
+        }
+
+        .btn:hover {
+            background-color: #ff5733;
+        }
+
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-container>div {
+            flex: 2;
+            margin: 0;
+        }
+    </style>
+
+    <style>
+        .projectsSection {
+            padding: 60px 20px;
+            background-color: rgb(8, 22, 68);
+            color: white;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: rgb(17, 37, 102);
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(33% - 40px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
+    <style>
+        .footer-content {
+            display: flex;
+            align-items: center;
+            padding: 180px;
+            background-color: rgb(8, 22, 68);
+            color: white;
+            text-align: center;
+            height: auto;
+        }
+
+        .footer-links,
+        .footer-contact {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .footer-links table {
+            margin: 0 auto;
+            border-spacing: 20px 10px;
+        }
+
+        .footer-links th,
+        .footer-links td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        .footer-links a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff5733;
+        }
+
+        .footer-links a i {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .footer-contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-contact button {
+            background-color: #1e90ff;
+            border: none;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-contact button:hover {
+            background-color: #ff5733;
+        }
+
+        .footer-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .footer-content.animate {
+            opacity: 1;
+            transform: translateX(6px) translateY(1px);
+
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer h3,
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left navbar-brand">
+                Suraj Portfolio
+            </div>
+            <div class="right">
+                <ul >
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div id="home" class="leftSection container mt-5">
+                <h1>Hello, I am <span class="purple">Suraj</span></h1>
+                <p>And I am Passionate <span id="element"></span></p>
+            </div>
+            <div id="home" class="rightSection container mt-5">
+                <img src="{% static 'images/collage.png' %}" alt="Collage of my work">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <div id="About" class="leftSection container mt-5">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis totam impedit recusandae
+                    sunt
+                    asperiores dolores fugit, dicta obcaecati sed quidem perferendis praesentium explicabo a qui at
+                    magnam. Eius, nam.</p>
+            </div>
+            <div class="rightSection">
+                <img src="{% static 'images/MyImage.jpg' %}" alt="Data chart representation">
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <div id="skills" class="container mt-5">
+                <h1>Skills</h1>
+                <p>Here are my skills.</p>
+            </div>
+        </section>
+        <hr>
+        <!-- <section class="fourthSection"> -->
+        <section class="projectsSection" id="projects">
+            <div class="container">
+                <h1>Projects</h1>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="{% static 'images/project1.jpg' %}" alt="Project 1">
+                        <h2>Project 1</h2>
+                        <p>Description of project 1.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="{% static 'images/project2.jpg' %}" alt="Project 2">
+                        <h2>Project 2</h2>
+                        <p>Description of project 2.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="{% static 'images/project3.jpg' %}" alt="Project 3">
+                        <h2>Project 3</h2>
+                        <p>Description of project 3.</p>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- </section> -->
+        <hr>
+        <section class="fifthSection">
+            <section id="resume" class="animate">
+                <h2>Resume</h2>
+                <!-- <iframe src="{% static 'Files/Resume-1.pdf'%}" width="100%" height="500px"></iframe> -->
+                <embed src="{% static 'Files/Resume-1.pdf'%}" width="500" height="375" type="application/pdf">
+
+                <br>
+                <a href="{% static 'Files/Resume-1.pdf'%}" download="Suraj_Kumar_Resume.pdf"
+                    class="btn btn-primary">Download Resume</a>
+            </section>
+
+        </section>
+        <hr>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h2>Get In Touch</h2>
+                <table>
+                    <tr>
+                        <td>Phone NO:</td>
+                        <td><a href="" target="_blank"><i class="fas fa-phone"></i> +91 9340699531</a></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><a href="mailto:ksuraj2235@gmail.com"><i class="fas fa-envelope"></i>
+                                ksuraj2235@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>GitHub:</td>
+                        <td><a href="https://github.com/surajkumar2235" target="_blank"><i class="fab fa-github"></i>
+                                surajkumar2235</a></td>
+                    </tr>
+                    <tr>
+                        <td>LinkedIn:</td>
+                        <td><a href="https://www.linkedin.com/in/surajkumar2235" target="_blank"><i
+                                    class="fab fa-linkedin"></i> surajkumar2235</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer-links">
+                <h3>Social Media Link</h3>
+                <div class="footer-second">
+                    <table>
+                        <tr>
+                            <td>Email:</td>
+                            <td><a href="mailto:ksuraj2235@gmail.com"><i class="fas fa-envelope"></i>
+                                    ksuraj2235@gmail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>GitHub:</td>
+                            <td><a href="https://github.com/surajkumar2235" target="_blank"><i
+                                        class="fab fa-github"></i> surajkumar2235</a></td>
+                        </tr>
+                        <tr>
+                            <td>LinkedIn:</td>
+                            <td><a href="https://www.linkedin.com/in/surajkumar2235" target="_blank"><i
+                                        class="fab fa-linkedin"></i> surajkumar2235</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="footer-contact card">
+                <h3 class="card-title">Contact Me</h3>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <!-- <Label for="Name" class="form-label">Name:</Label> -->
+                        Name: <input class="form-control" type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="md-3">
+                        <!-- <label for="exampleInputEmail1"  class="form-label">Email</label> -->
+                        Email: <input class="form-control" type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <!-- <label for="HrMessage" class="form-label">Your Message</label> -->
+                    Message: <textarea name="message" class="form-control" placeholder="Your Message" height="20px"
+                        width="40px" required></textarea>
+                    <button type="submit" class="btn btn-primary cont-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Machine Learning', 'Natural Language Processing', 'Data Science', '& Deep Learning '],
+            typeSpeed: 40,
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const projectCards = document.querySelectorAll('.project-card');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            projectCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const footerContent = document.querySelector('.footer-content');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            observer.observe(footerContent);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(contactForm);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    message: formData.get('message')
+                };
+
+                fetch('/api/contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken') // Add CSRF token for security
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Your message has been sent successfully.');
+                            contactForm.reset();
+                        } else {
+                            alert('There was an error sending your message. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error sending your message. Please try again.');
+                    });
+            });
+
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
